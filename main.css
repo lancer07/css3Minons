@@ -1,0 +1,421 @@
+@-webkit-keyframes eye {
+  /* line 3, main.less */
+  0% {
+    -webkit-transform: rotate(0, 0);
+            transform: rotate(0, 0);
+  }
+  /* line 6, main.less */
+  50% {
+    -webkit-transform: translate(70px, 0px);
+            transform: translate(70px, 0px);
+  }
+  /* line 9, main.less */
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+@keyframes eye {
+  /* line 3, main.less */
+  0% {
+    -webkit-transform: rotate(0, 0);
+            transform: rotate(0, 0);
+  }
+  /* line 6, main.less */
+  50% {
+    -webkit-transform: translate(70px, 0px);
+            transform: translate(70px, 0px);
+  }
+  /* line 9, main.less */
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes up-down {
+  /* line 15, main.less */
+  0% {
+    -webkit-transform: rotate(0, 0);
+            transform: rotate(0, 0);
+  }
+  /* line 18, main.less */
+  50% {
+    -webkit-transform: translate(0, 2px);
+            transform: translate(0, 2px);
+  }
+  /* line 21, main.less */
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@keyframes up-down {
+  /* line 15, main.less */
+  0% {
+    -webkit-transform: rotate(0, 0);
+            transform: rotate(0, 0);
+  }
+  /* line 18, main.less */
+  50% {
+    -webkit-transform: translate(0, 2px);
+            transform: translate(0, 2px);
+  }
+  /* line 21, main.less */
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+/* line 26, main.less */
+body {
+  background: #96004a;
+  margin: 0;
+  padding: 0;
+}
+/* line 31, main.less */
+div {
+  margin: 0;
+  padding: 0;
+}
+/* line 35, main.less */
+.minions {
+  width: 380px;
+  height: 700px;
+  margin: 0px auto;
+  position: relative;
+  -webkit-transform: scale(0.6, 0.6);
+      -ms-transform: scale(0.6, 0.6);
+          transform: scale(0.6, 0.6);
+}
+/* line 41, main.less */
+.minions .hairs {
+  position: absolute;
+  top: -40px;
+  z-index: 3;
+}
+/* line 45, main.less */
+.minions .hairs .hair {
+  background: #000;
+  width: 2px;
+  height: 70px;
+  position: absolute;
+}
+/* line 51, main.less */
+.minions .hairs .hair1 {
+  background: #000;
+  width: 2px;
+  height: 70px;
+  position: absolute;
+  left: 155px;
+  -webkit-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+/* line 56, main.less */
+.minions .hairs .hair2 {
+  background: #000;
+  width: 2px;
+  height: 70px;
+  position: absolute;
+  left: 185px;
+}
+/* line 60, main.less */
+.minions .hairs .hair3 {
+  background: #000;
+  width: 2px;
+  height: 70px;
+  position: absolute;
+  left: 215px;
+  -webkit-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+/* line 66, main.less */
+.minions .body {
+  overflow: hidden;
+  background: #fff500;
+  width: 380px;
+  position: absolute;
+  z-index: 1;
+  height: 700px;
+  border-radius: 180px;
+}
+/* line 76, main.less */
+.minions .glasses-type {
+  height: 52px;
+  background: #1f1a17;
+  width: 100%;
+  position: absolute;
+  top: 200px;
+  z-index: 1;
+}
+/* line 84, main.less */
+.minions .glasses {
+  z-index: 2;
+  position: absolute;
+  background: #dededd;
+  border: 2px solid #1f1a17;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  top: 140px;
+}
+/* line 93, main.less */
+.minions .glasses.left-glasses {
+  left: 8%;
+}
+/* line 95, main.less */
+.minions .glasses.left-glasses .ball {
+  -webkit-animation: eye 1.5s infinite ease;
+          animation: eye 1.5s infinite ease;
+}
+/* line 100, main.less */
+.minions .glasses.right-glasses {
+  right: 8%;
+}
+/* line 102, main.less */
+.minions .glasses.right-glasses .ball {
+  -webkit-animation: eye 1.5s infinite ease;
+          animation: eye 1.5s infinite ease;
+}
+/* line 107, main.less */
+.minions .glasses .eye {
+  background: #fff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #1f1a17;
+  margin: 15px auto;
+  position: relative;
+}
+/* line 115, main.less */
+.minions .glasses .eye .ball {
+  background: #8f5444;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #1f1a17;
+  position: absolute;
+  top: 40%;
+  -webkit-transition: all .15s linear;
+          transition: all .15s linear;
+}
+/* line 124, main.less */
+.minions .glasses .eye .ball strong {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #1f1a17;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/* line 137, main.less */
+.minions .mouth {
+  width: 40%;
+  height: 80px;
+  background: #fff;
+  position: absolute;
+  top: 320px;
+  left: 30%;
+  z-index: 1;
+  border-radius: 120px 120px 40px 40px;
+  border: 2px solid #1f1a17;
+  overflow: hidden;
+  -webkit-animation: up-down 0.5s infinite ease;
+          animation: up-down 0.5s infinite ease;
+}
+/* line 150, main.less */
+.minions .mouth .tooths .tooth {
+  border-right: 2px solid #1f1a17;
+  height: 100%;
+  width: 0;
+  position: absolute;
+}
+/* line 156, main.less */
+.minions .mouth .tooths .tooth1 {
+  border-right: 2px solid #1f1a17;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 25%;
+}
+/* line 160, main.less */
+.minions .mouth .tooths .tooth2 {
+  border-right: 2px solid #1f1a17;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 50%;
+}
+/* line 164, main.less */
+.minions .mouth .tooths .tooth3 {
+  border-right: 2px solid #1f1a17;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 75%;
+}
+/* line 168, main.less */
+.minions .mouth .tooths .line {
+  width: 100%;
+  top: 48%;
+  border-top: 3px solid #1f1a17;
+  position: absolute;
+}
+/* line 177, main.less */
+.minions .arm {
+  position: absolute;
+  width: 50px;
+  height: 400px;
+  background: #fff500;
+  border-radius: 50px;
+  top: 190px;
+  z-index: 0;
+}
+/* line 185, main.less */
+.minions .arm.left-arm {
+  left: -20px;
+  -webkit-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+/* line 189, main.less */
+.minions .arm.right-arm {
+  right: -20px;
+  -webkit-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+/* line 193, main.less */
+.minions .arm .hand {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #1f1a17;
+  left: -5px;
+}
+/* line 203, main.less */
+.minions .cloth {
+  background: #667ab3;
+  border-radius: 20px;
+  bottom: 20px;
+  width: 280px;
+  height: 250px;
+  position: absolute;
+  z-index: 1;
+  left: 50px;
+}
+/* line 213, main.less */
+.minions .pocket {
+  border: 2px solid #1f1a17;
+  border-radius: 5px 5px 30px 30px;
+  width: 100px;
+  left: 140px;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+  bottom: 80px;
+}
+/* line 222, main.less */
+.minions .pocket > div {
+  background: #1f1a17;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 20px;
+  left: 25px;
+  position: absolute;
+}
+/* line 230, main.less */
+.minions .pocket > div > div {
+  width: 20px;
+  height: 20px;
+  border: 5px solid #667ab3;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/* line 241, main.less */
+.minions .trousers {
+  background: #667ab3;
+  border-radius: 10px 10px 130px 130px;
+  bottom: 0;
+  width: 380px;
+  height: 160px;
+  position: absolute;
+  z-index: 1;
+}
+/* line 250, main.less */
+.minions .straps {
+  width: 40px;
+  height: 150px;
+  position: absolute;
+  z-index: 1;
+  background: #667ab3;
+  bottom: 230px;
+}
+/* line 257, main.less */
+.minions .straps.left-straps {
+  left: 10px;
+  -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+/* line 261, main.less */
+.minions .straps.right-straps {
+  right: 10px;
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+/* line 265, main.less */
+.minions .straps .fastener {
+  background: #1f1a17;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  bottom: 10px;
+  position: absolute;
+  left: 10px;
+}
+/* line 276, main.less */
+.minions .leg {
+  background: #667ab3;
+  width: 70px;
+  height: 120px;
+  position: absolute;
+  bottom: -80px;
+}
+/* line 282, main.less */
+.minions .leg.left-leg {
+  left: 20%;
+}
+/* line 284, main.less */
+.minions .leg.left-leg .footer {
+  right: -2px;
+  border-radius: 100px 0 0 20px;
+}
+/* line 289, main.less */
+.minions .leg.right-leg {
+  right: 20%;
+}
+/* line 291, main.less */
+.minions .leg.right-leg .footer {
+  left: -2px;
+  border-radius: 0 100px 20px 0;
+}
+/* line 296, main.less */
+.minions .leg .footer {
+  background: #1f1a17;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
