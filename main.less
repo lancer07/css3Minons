@@ -32,16 +32,18 @@ div{
 	margin: 0;
 	padding: 0;
 }
-.minions{
-	width: 380px;
-	height:700px;
-	margin: 0px auto;
-	position:relative;
-	transform : scale(0.6,0.6);
+.Minion(@width:1;@height:1;@eye:2){
+	width: 380px * @width;
+	height:700px * @height;
+	position:absolute;
+	margin-top: -100px;
+	margin-left:-20px;
+	transform : scale(0.5,0.5);
 	.hairs{
 		position:absolute;
 		top: -40px;
 		z-index: 3;
+		width: 100%;
 		.hair{
 			background:#000;
 			width:2px;
@@ -50,16 +52,16 @@ div{
 		}
 		.hair1{
 			.hair;
-			left:155px;
+			left:45%;
 			transform:rotate(-20deg);
 		}
 		.hair2{
 			.hair;
-			left:185px;
+			left:50%;
 		}
 		.hair3{
 			.hair;
-			left:215px;
+			left:55%;
 			transform:rotate(20deg);
 		}
 	}
@@ -67,11 +69,11 @@ div{
 		overflow: hidden;
 		background: #fff500;
 
-		width: 380px;
+		width: 380px * @width;
 		position:absolute;
 		z-index: 1;
-		height:700px;
-		border-radius: 180px;
+		height:700px * @height;
+		border-radius: 180px * @width;
 	}
 	.glasses-type{ //眼镜
 		height:52px;
@@ -81,6 +83,7 @@ div{
 		top: 200px;
 		z-index: 1;
 	}
+	
 	.glasses{
 		z-index: 2;
 		position:absolute;
@@ -90,19 +93,35 @@ div{
 		height:150px;
 		border-radius: 50%;
 		top: 140px;
-		&.left-glasses{
+		&.left-glasses when (@eye = 2){
 			left:8%;
 			.ball{
 				//left : 45%;
 				animation: eye 1.5s infinite ease;
 			}
 		}
-		&.right-glasses{
+		&.right-glasses when (@eye = 2){
 			right:8%;
 			.ball{
 				//right:45%;
 				animation: eye 1.5s infinite ease;
 			}
+		}
+		&.left-glasses when (@eye = 1){
+			left:50%;
+			margin-left: -90px;
+			width: 180px;
+			height: 180px;
+			.eye{
+				width: 150px;
+				height: 150px;
+				.ball{
+					animation: eye 1.5s infinite ease;
+				}
+			}
+		}
+		&.right-glasses when (@eye = 1){
+			display: none;
 		}
 		.eye{
 			background:#fff;
@@ -134,12 +153,13 @@ div{
 			}
 		}
 	}
+
 	.mouth{
 		width:40%;
 		height:80px;
 		background:#fff;
 		position:absolute;
-		top: 320px;
+		bottom:42%;
 		left:30%;
 		z-index: 1;
 		border-radius: 120px 120px 40px 40px;
@@ -204,17 +224,18 @@ div{
 		background:#667ab3;
 		border-radius: 20px;
 		bottom:20px;
-		width:280px;
+		width:80%;
 		height:250px;
 		position:absolute;
 		z-index: 1;
-		left:50px;
+		left:10%;
 	}
 	.pocket{
 		border:2px solid #1f1a17;
 		border-radius: 5px 5px 30px 30px;
 		width:100px;
-		left:140px;
+		left:50%;
+		margin-left: -50px;
 		height:100px;
 		position:absolute;
 		z-index: 2;
@@ -242,7 +263,7 @@ div{
 		background:#667ab3;
 		border-radius: 10px 10px 130px 130px;
 		bottom:0;
-		width:380px;
+		width:100%;
 		height:160px;
 		position:absolute;
 		z-index: 1;
@@ -302,3 +323,34 @@ div{
 		}
 	}
 }
+
+.minion-1{
+	z-index: 1;
+	top: 50px;
+	left: 0;
+	.Minion(1,1,2);	
+}
+
+.minion-2{
+	z-index: 2;
+	top: 0;
+	left: 24%;
+	.Minion(0.88,1.1,1);	
+}
+
+.minion-3{
+	z-index: 2;
+	top: 44px;
+	left: 42%;
+	.Minion(1.15,1.02,1);	
+}
+
+.minion-4{
+	z-index: 1;
+	top: 5px;
+	left: 67%;
+	.Minion(1,1.1,2);	
+}
+
+
+
